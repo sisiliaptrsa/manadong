@@ -1,4 +1,5 @@
 import React from 'react';
+import Manadong from '../Assets/manadong.svg'
 import { FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-section-one">
         <div className="footer-logo-container">
-          <img src={'/Assets/manadong.svg'} alt="" />
+          <img src={Manadong} alt="" />
         </div>
         <p>Copyright &copy; 2023 PT Bogadong Anugerah Indonesia</p>
       </div>

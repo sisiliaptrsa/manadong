@@ -1,5 +1,9 @@
 import React from 'react'
+import Grab from '../Assets/grab.png'
+import GoFood from '../Assets/gofood.png'
+import Shopee from '../Assets/shopee.png'
 import NavigationTab from "../Components/NavigationTab";
+import {Link} from 'react-router-dom'
 
 const Order = () => {
   return (
@@ -12,22 +16,22 @@ const Order = () => {
         </div>
         <div className="order-list-container">
           <div className="order-list">
-            <img src={"/Assets/grab.png"} alt="" className="order-image" />
-            <a href="/order/grab-food-outlet">
+            <img src={Grab} alt="" className="order-image" />
+            <Link to="/order/grab-food-outlet">
               <button className="order-button">Order Now</button>
-            </a>
+            </Link>
           </div>
           <div className="order-list">
-            <img src={"/Assets/gofood.png"} alt="" className="order-image" />
-            <a href="">
+            <img src={GoFood} alt="" className="order-image" />
+            <Link to="">
               <button className="order-button">Order Now</button>
-            </a>
+            </Link>
           </div>
           <div className="order-list">
-            <img src={"/Assets/shopee.png"} alt="" className="order-image" />
-            <a href="">
+            <img src={Shopee} alt="" className="order-image" />
+            <Link to="">
               <button className="order-button">Order Now</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

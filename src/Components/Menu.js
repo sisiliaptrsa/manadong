@@ -1,47 +1,54 @@
 import React, { useState } from 'react';
+import Rica from '../Assets/rica.png'
+import Cumi from '../Assets/cumi.png'
+import Tinorasak from '../Assets/tinorasak.png'
+import Perkedel from '../Assets/perkedel.png'
+import Woku from '../Assets/woku.png'
+import Lauk from '../Assets/lauk.png'
 import Card from './Produk/Card';
 import Popup from './Produk/Popup';
+import {Link} from 'react-router-dom';
 
 const sampleMenu = [
   {
     name: "Ayam Rica",
-    image: "/Assets/rica.png",
+    image: Rica,
     price: "Rp. 45,000",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Cumi Hitam",
-    image: "/Assets/cumi.png",
+    image: Cumi,
     price: "Rp. 40,000",
     desc: "Steamed rice, 2 pieces of corn fritters, and squid with black sauce.",
   },
   {
     name: "Cakalang Tinorasak",
-    image: '/Assets/tinorasak.png',
+    image: Tinorasak,
     price: "Rp. 45,000",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Perkedel Jagung",
-    image: "/Assets/perkedel.png",
+    image: Perkedel,
     price: "Rp. 35,000",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Ayam Woku",
-    image: "/Assets/woku.png",
+    image: Woku,
     price: "Rp. 45,000",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Lauk Frozen",
-    image: '/Assets/lauk.png',
+    image: Lauk,
     price: "Rp. 35,000",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Cakalang Rabe",
-    image: "/Assets/rica.png",
+    image: Rica,
     price: "Rp. 45,000",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -77,11 +84,11 @@ function Menu() {
                 <Popup isOpen={selectedItem !== null} item={selectedItem} onClose={handlePopupClose} />
             </div>
             <div className='menu-button-container'>
-                <a href='/order'>
+                <Link to='/order'>
                     <button className="menu-button">
                         Order Now
                     </button>
-                </a>
+                </Link>
             </div>
         </div>
     </div>

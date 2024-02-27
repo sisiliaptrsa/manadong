@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import Manadong from '../Assets/manadong.svg'
 import { HiOutlineBars3 } from 'react-icons/hi2';
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import CommentRoundedIcon from '@mui/icons-material/CommentRounded';
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -31,13 +33,13 @@ const Navbar = () => {
   return (
     <nav>
       <div className='nav-logo-container'>
-        <img src={"/Assets/manadong.svg"} alt=""/>
+        <img src={Manadong} alt=""/>
       </div>
       <div className='navbar-links-container'>
-        <a href="/#home">Home</a>
-        <a href="">Eatery</a>
-        <a href="">News</a>
-        <a href="/about">About Us</a>
+        <Link to="/#home">Home</Link>
+        <Link to="">Eatery</Link>
+        <Link to="">News</Link>
+        <Link to="/about">About Us</Link>
       </div>
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)}/>
@@ -55,7 +57,6 @@ const Navbar = () => {
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
               </ListItemButton>
-
             </ListItem>
             ))}
           </List>

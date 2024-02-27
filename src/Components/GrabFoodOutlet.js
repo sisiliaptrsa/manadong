@@ -1,4 +1,5 @@
 import React from 'react'
+import Outlet from '../Assets/outlet.png'
 import NavigationTab from './NavigationTab';
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -40,7 +41,7 @@ const OutletList = () => {
             <div className="outlet-text-container">
               <img
                 className="outlet-section-image"
-                src={"/Assets/outlet.png"}
+                src={Outlet}
                 alt=""
               />
             </div>

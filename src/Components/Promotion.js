@@ -1,4 +1,7 @@
 import React from 'react';
+import BuyGet from '../Assets/b2g1.jpg'
+import Diskon from '../Assets/discount.jpg'
+import Bundle from '../Assets/bundle.jpg'
 
 const PromotionItem = ({ image, title, description }) => {
   return (
@@ -23,18 +26,18 @@ const PromotionList = ({ items }) => {
 const Promotion = () => {
   const promotionItems = [
     {
-      image: "/Assets/b2g1.jpg",
+      image: BuyGet,
       title: "Buy 2 Get 1",
       description: "Buy 2 and get 1 free, applicable to select variants.",
     },
     {
-      image: "/Assets/discount.jpg",
+      image: Diskon,
       title: "Discount 20%",
       description:
         "Get a 20% discount on all purchases this weekend. Minimum purchase Rp. 50,000",
     },
     {
-      image: '/Assets/bundle.jpg',
+      image: Bundle,
       title: "Bundle Deal",
       description:
         "Purchase Ayam Woku and Ayam Rica can save 30% on the total cost.",

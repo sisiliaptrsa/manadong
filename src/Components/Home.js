@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Banner from '../Assets/banner.png'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -12,13 +14,13 @@ const Home = () => {
             is a Manado dish with a spicy and appetizing flavour.
           </p>
           <h2 className="primary-txt2">#NikmatnyaGaPakeRibet</h2>
-          <a href='/order'>
+          <Link to='/order'>
             <button className="secondary-button">
               Order Now
             </button>
-          </a>
+          </Link>
         </div>
-        <img src={'/Assets/banner.png'} alt="" className="home-image-container" />
+        <img src={Banner} alt="" className="home-image-container" />
       </div>
     </div>
   );

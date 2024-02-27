@@ -1,16 +1,18 @@
+import {Link, useLocation} from 'react-router-dom'
+
 export default function NavigationTab() {
-    const pathName = window.location.pathname
+    const {pathname} = useLocation()
     
-    const pathNames = window.location.pathname.split('/').filter(path => path !== '')
+    const pathNames = pathname.split('/').filter(path => path !== '')
 
     return (
         <div className="navigation-tab-container">
-            <a href="/" className="navigation-tab-path">Home</a>
+            <Link to="/" className="navigation-tab-path">Home</Link>
             {pathNames.map((path, index) => {
                 return (
                     <div key={index}>
                         <span className="navigation-tab-divider">/</span>
-                        <a className="navigation-tab-path" href={`/${pathNames.slice(0, index + 1).join("/")}`}>{path}</a>
+                        <Link className="navigation-tab-path" to={`/${pathNames.slice(0, index + 1).join("/")}`}>{path.split("-").join(" ")}</Link>
                     </div>
                 )
             })}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../Assets/banner.png'
 
 const About = () => {
 return (
@@ -7,7 +8,7 @@ return (
             <p className='primary-subheading'>About Us</p>
             <div className='dividerLine'/>
             <div className='about-section-image-container'>
-                <img className='about-section-image' src={'/Assets/banner.png'} alt='' />
+                <img className='about-section-image' src={Banner} alt='' />
                 <div className='about-section-text-container'>
                     <p className='about-company-text'>About Our Company</p>
                     <p className='about-text'>
